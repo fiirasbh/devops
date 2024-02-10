@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t mon_app_flask .'
+                dir('application') {
+
+                    sh 'docker build -t mon_app_flask .'
             }
         }
         
