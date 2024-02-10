@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 
-                sh 'docker build -t mon_app_flask .'
+                sh 'docker build -t app_flask .'
             }
         }
         
