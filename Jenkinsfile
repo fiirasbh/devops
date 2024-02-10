@@ -3,7 +3,7 @@ pipeline {
     environment {
         // Ajoute le chemin de kubectl au PATH pour qu'il soit accessible partout dans le pipeline
         PATH = "/usr/local/bin:$PATH"
-        KUBECONFIG = '~/.kube/config'
+        KUBECONFIG = '/var/lib/jenkins/.kube/config'
     }
     stages {
         stage('Build') {
