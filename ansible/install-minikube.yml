@@ -1,0 +1,7 @@
+- hosts: localhost
+  become: yes
+  tasks:
+  - name: Installer Minikube
+    shell: |
+      curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm
+      rpm -Uvh minikube-latest.x86_64.rpm

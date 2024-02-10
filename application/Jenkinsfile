@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                sh 'docker build -t mon_app_flask .'
+            }
+        }
+        stage('Test') {
+            steps {
+                // Ajoutez des étapes pour tester votre application
+            }
+        }
+        stage('Deploy') {
+            steps {
+                // Utilisez kubectl pour déployer sur Kubernetes
+                sh 'kubectl apply -f deployment.yaml'
+            }
+        }
+    }
+}
